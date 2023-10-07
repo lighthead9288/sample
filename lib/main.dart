@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:sample_project/branch2_widget.dart';
+import 'package:sample_project/branch1_widget.dart';
+import 'package:sample_project/branch3_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,9 +36,17 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 2;
 
+  int _calc() {
+    if (DateTime.now().day == 0) {
+      return _counter + 1;
+    } else {
+      return _counter + 2;
+    }
+  }
+
   void _incrementCounter() {
     setState(() {
-      _counter++;
+      _calc();
     });
   }
 
@@ -57,6 +68,9 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            const Branch1Widget(),
+            const Branch2Widget(),
+            const Branch3Widget(),
           ],
         ),
       ),
