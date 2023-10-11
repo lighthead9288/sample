@@ -62,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
-              'You have pushed the button icon',
+              'You have pushed the button icon 2',
             ),
             Text(
               '$_counter',
